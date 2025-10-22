@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İnci 💖</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  body {
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background: linear-gradient(135deg, #ff4d6d, #ffafbd); /* Pembe-kırmızı temalı */
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    text-align:center;
+    overflow:hidden;
+  }
+  h1 {
+    font-size:2.5em;
+    margin:0.5em;
+    animation: fadeIn 2s ease forwards;
+  }
+  p {
+    font-size:1.2em;
+    margin:0.2em;
+    opacity:0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay:1s;
+  }
+  @keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+  }
+  .message {
+    font-size:1.5em;
+    margin-top:20px;
+    animation: messageFade 10s infinite;
+  }
+  @keyframes messageFade {
+    0% {opacity:0;}
+    10% {opacity:1;}
+    20% {opacity:1;}
+    25% {opacity:0;}
+    35% {opacity:0;}
+    40% {opacity:1;}
+    50% {opacity:1;}
+    55% {opacity:0;}
+    65% {opacity:0;}
+    70% {opacity:1;}
+    80% {opacity:1;}
+    85% {opacity:0;}
+    100% {opacity:0;}
+  }
+</style>
+</head>
+<body>
+
+<h1>Merhaba İnci 💖</h1>
+<div class="message" id="messages">Seninle her an daha güzelleşiyor 💫</div>
+
+<audio autoplay loop>
+  <source src="https://www.myinstants.com/media/sounds/manifest.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  const messages = [
+    "Seninle her an daha güzelleşiyor 💫",
+    "Sen benim en değerli hazinemsin 🌹",
+    "Her baktığımda aklıma sen geliyorsun 💕",
+    "Seni tanıdığım için çok şanslıyım ❤️"
+  ];
+  let index = 0;
+  const messageElement = document.getElementById('messages');
+  setInterval(() => {
+    index = (index + 1) % messages.length;
+    messageElement.textContent = messages[index];
+  }, 5000);
+</script>
+
+</body>
+</html>
